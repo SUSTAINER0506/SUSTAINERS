@@ -1,6 +1,6 @@
 # SUSTAINERS
 Sustainergy Solutions
 
-Sustainability is not a trend, It's a responsibility.
+Sustainability is not a Trend, It's a Responsibility.
 
-Sustainers is a project designed to optimize energy and water consumption in home appliances like refrigerators, air conditioners, washing machines, and desert air coolers. Built using Python, AI, and real-time monitoring, the platform provides users with personalized optimization suggestions to enhance resource efficiency and promote sustainable living.
+Sustainers is a project designed to Optimize energy and water consumption in home appliances like Refrigerators, Air conditioners, Washing machines, and Desert air coolers. Built using Python, AI, and Real-time monitoring system, the platform provides users with Personalized Optimization suggestions to enhance Resource Efficiency and promote Sustainable living.
