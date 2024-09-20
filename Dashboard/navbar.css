@@ -1,0 +1,149 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+    /* background: rgba(255, 255, 255, 0.8); */
+    background: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%; /* Adjusted to account for padding */
+    top: 0;
+    /* left: 10px; Adjusted to account for padding */
+    backdrop-filter: blur(10px);
+    z-index: 100; /* Ensure navbar stays on top */
+    gap: 15px;
+}
+#leftmost {
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
+    gap: 10px; /* Space between logo and text */
+    padding: 0; /* Remove any internal padding */
+    margin: 0; /* Remove any margin */
+}
+
+.sustainers {
+    font-family: proxima nova;
+    color: #028a36;
+    font-size: 30px; /* Adjust font size */
+    font-weight: bold;
+    display: inline-block; /* Ensure text and logo are inline */
+    line-height: 1; /* Set line height to avoid extra spacing */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Ensure logo is properly sized */
+.logo {
+    height: 40px; /* Adjust logo height */
+    width: auto; /* Keep aspect ratio */
+}
+
+
+/* Navbar Sections */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    gap: 10px;
+}
+
+/* Navbar Buttons */
+.nav-button, .logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-button {
+    background: linear-gradient(145deg, #3ddb62, #045a26);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.6s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.nav-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.nav-button:hover {
+    background: linear-gradient(145deg, #218838, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Moon Icon Styling */
+.nav-right img {
+    width: 30px; /* Adjust the size of the icon */
+    height: 30px;
+    margin-right: 15px; /* Adds space between the moon icon and the logout button */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); /* Optional shadow for better visibility */
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer to indicate interaction */
+}
+
+.nav-right img:hover {
+    transform: rotate(15deg); /* Slight rotation on hover */
+}
+
+.logout-button {
+    background-color: #e74c3c;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.5);
+}
+
+.logout-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(231, 76, 60, 0.3);
+}
+
+
+
+/* Add this to navbar.css */
+
+.toggleButton {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.dark-mode .toggleButton {
+    filter: invert(1);
+}
+
+/* Add this to navbar.css */
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.toggleButton {
+    transition: opacity 0.3s ease;
+}
+

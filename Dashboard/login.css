@@ -1,0 +1,629 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-image: url('4.jpg'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+/* Background Overlay Styling */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    /* Blackish with 50% opacity */
+    backdrop-filter: blur(0px);
+    /* Blur effect */
+    display: none;
+    /* Hidden by default */
+    z-index: 98;
+    /* Ensure it's below the form but above other content */
+}
+
+/* Make sure this styling does not affect other content */
+/* body.no-scroll {
+    overflow: hidden; 
+} */
+
+#leftmost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px;
+    /* Adjust logo height */
+    width: auto;
+    /* Keep aspect ratio */
+}
+
+.sustainers {
+    font-family: proxima nova;
+    color: #028a36;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    /* Use flex to display letters in a row */
+    animation: none;
+    /* Disable initial animation */
+
+}
+
+/* .sustainers span {
+    opacity: 0; Hide letters by default
+    animation: animateText 1s linear forwards; //Animation to show letters
+    animation-delay: calc(var(--index) * 0.3s); //Delay based on index for sequential effect
+} */
+
+/* Keyframes for text animation */
+/* @keyframes animateText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* Infinite loop effect */
+
+
+/* Adding infinite looping for text display */
+@keyframes textLoop {
+    0% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+header {
+    height: 8vh;
+}
+
+.outer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    /* Adjusted to account for padding */
+    top: 0;
+    /* left: 10px; Adjusted to account for padding */
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    /* Ensure navbar stays on top */
+    gap: 15px;
+    /* background: transparent; */
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    font-size: 17px;
+}
+
+#middle ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#middle ul li a:hover {
+    border-bottom: 1px solid black;
+}
+
+/* Style for the login button */
+#login {
+    background-color: #ffffff; 
+    padding: 10px 0px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; 
+}
+
+/* Style for the anchor inside the login button */
+#login a {
+    color: rgb(0, 0, 0); /* White text */
+    border: 2px solid rgb(0, 0, 0);
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Optional hover effect for the anchor text */
+#login a:hover {
+    color: #000000; 
+}
+
+.form {
+    /* position: relative; */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    border-radius: 12px;
+    /* Softer, more rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Deeper shadow for a lifted effect */
+    max-width: 450px;
+    width: 100%;
+    margin: 50px auto;
+    /* Centered on the page with more spacing */
+    backdrop-filter: blur(10px);
+    /* Slight blur for a glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.374);
+    /* Light border for a glass effect */
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    z-index: 100;
+    /* Ensure form is below navbar */
+    margin-top: 10px;
+    /* Adjust to ensure no overlap */
+    /* animation: fadeIn 1s ease-out; Fade-in animation */
+    /* background: rgba(0,0,0,0) */
+}
+#form1{
+    top: 12%;
+}
+/* #form1 .username input,
+#form1 .username input,
+#form1 .username input {
+    margin: 25px 0px 0px 0px;
+} */
+.signup {
+    font-family: proxima nova;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 22px;
+}
+#signup-username{
+    margin-left: 5px;
+}
+.text {
+    margin: 40px 0px 0px 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    width: 85%;
+    font-size: 20px;
+    margin-left: 5px;
+    color: #333;
+}
+
+.input {
+    padding-left: 15px;
+}
+
+.form p {
+    text-align: center;
+}
+
+.btn {
+    color: rgb(255, 255, 255);
+    background: #028a36;
+    border: none;
+    border-radius: 5px;
+    width: 85%;
+    margin: auto;
+    height: 5vh;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+#signup-btn{
+    margin-top: 30px;
+}
+
+.last {
+    margin: 22px;
+}
+
+.form a {
+    text-decoration: none;
+    color: #028a36;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form>i {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    margin: 20px 0px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.right-most {
+    display: flex;
+    align-items: center;
+}
+
+/* Moon Icon Styling */
+/* .toggleButton {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;   
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));    
+    transition: transform 0.3s ease;
+    cursor: pointer;    
+} */
+
+/* .toggleButton:hover {
+    transform: rotate(15deg);
+} */
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: rgb(16, 16, 16);
+    color: #e0e0e0;
+}
+
+body.dark-mode .outer {
+    background: rgb(16, 16, 16);
+    color: #e0e0e0;
+}
+
+body.dark-mode .form {
+    background-color: rgba(40, 40, 40, 0.9);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode #login {
+    color: #e0e0e0;
+    border: 1px solid white;
+}
+
+body.dark-mode #middle ul li a {
+    color: white;
+}
+
+body.dark-mode #middle ul li a:hover {
+    border-bottom: 1px solid white;
+}
+
+body.dark-mode #login:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .input input {
+    color: #e0e0e0;
+    /* Text color inside input fields */
+    background: transparent;
+    /* Transparent background for inputs */
+    border-bottom: 1px solid #e0e0e0;
+    /* Lighter border for inputs */
+}
+
+body.dark-mode .btn {
+    background: #028a36;
+    /* Darker button background */
+}
+
+body.dark-mode .form a {
+    color: #028a36;
+    /* Light purple for links */
+}
+
+body.dark-mode .toggleButton {
+    filter: invert(100%);
+    /* Invert colors for better visibility */
+}
+
+body.dark-mode .fa-eye,
+body.dark-mode .fa-eye-slash {
+    color: #e0e0e0;
+    /* Adjust icon color in dark mode */
+}
+
+body.dark-mode .navbar ul li,
+body.dark-mode .navbar ul li:hover {
+    color: #e0e0e0;
+}
+
+/* OR Line Styling */
+.or-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+    position: relative;
+}
+
+.or-line::before,
+.or-line::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #adadad;
+    margin: 0 10px;
+}
+
+.or-line span {
+    font-weight: bold;
+    color: #555;
+    /* background-color: #fff;  */
+    padding: 0 10px;
+}
+
+body.dark-mode .or-line span {
+    color: #e0e0e0;
+    background-color: transparent;
+}
+
+
+/* Google Signup Button Styles */
+.google-signup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    /* Google white background */
+    color: #000000;
+    /* Google blue */
+    /* font-weight: bold; */
+    font-size: 17.5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 85%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-btn:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+body.dark-mode .google-btn {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #555;
+}
+
+body.dark-mode .google-btn:hover {
+    background-color: #444;
+}
+
+
+/* General Section Styling */
+section {
+    padding: 80px 5%;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    background-color: #fff;
+    padding: 60px 3%;
+    /* margin-top: 8vh;  */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#home-img img {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#home-img {
+    flex: 3;
+    /* Allocate 30% space to the image */
+}
+
+#home-theory {
+    flex: 7;
+    margin-left: 30px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.points {
+    margin-bottom: 30px;
+}
+
+.points h3 {
+    font-size: 24px;
+    color: #028a36;
+    margin-bottom: 10px;
+}
+
+.points p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* About Us Section */
+#about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 50px 0px;
+    gap: 70px;
+}
+
+#about-us #home-img {
+    flex: 1;
+}
+
+#about-us-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-us-theory {
+    flex: 1;
+    /* margin-left: 20px; */
+    text-align: left;
+    gap: 10px;
+}
+
+#about-us-theory #box-2 {
+    margin-top: 40px;
+}
+
+#about-us-theory h1,
+#about-us-theory h2 {
+    color: #028a36;
+    margin-bottom: 15px;
+}
+
+#about-us-theory p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    background-color: white;
+    color: black;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#contact #images img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#contact #images img:hover {
+    transform: scale(1.1);
+}
+
+/* Button Hover Effects */
+button,
+a {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+body.dark-mode #home,
+#about-us,
+#contact {
+    background-color: rgba(20, 20, 20, 1.0);
+    color: white;
+}
+
+body.dark-mode .points p, #about-us-theory p{
+    color: white;
+}
+
+body:not(.dark-mode)  .points p, body:not(.dark-mode)  #about-us-theory p,
+body:not(.dark-mode) #contact {
+    background-color: #fff;
+    color: black;
+}
+
+body:not(.dark-mode) #about-us{
+    background-color: #fff;
+}
+
+
+
+
+/* Specific error styling for the password input */
+#password-error {
+    color: red;  /* Correct error message color */
+    font-size: 0.85em;  /* Proper error message font size */
+    margin-top: 5px;  /* Spacing between input and error message */
+    display: block;  /* Ensure it's visible when triggered */
+}
+
+/* Ensure input fields have enough space */
+input[type="password"] {
+    /* margin-bottom: 20px; Give more space for the error to fit underneath */
+}
+
+/* General error message style */
+.popup-message.error {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block;
+    margin-left: 25px;
+}  

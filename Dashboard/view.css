@@ -1,0 +1,110 @@
+.view-container {
+    /* background-color: #FFFFFF;  */
+    background: transparent;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow for a softer effect */
+    width: 100%;
+    max-width: 1000px;
+    animation: fadeIn 1s ease-out;
+}
+
+#view-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Dark grey for heading */
+    font-size: 28px;
+    font-weight: 700;
+    animation: headingAnimation 1s ease-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #DDDDDD; /* Light grey border for table */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+th {
+    background-color: #F2F2F2; /* Light grey background for table headers */
+    color: #333333; /* Dark grey text */
+}
+
+td {
+    background-color: #FFFFFF; /* White background for table cells */
+    color: #000000; /* Black text */
+}
+
+td:hover {
+    background-color: #F7F7F7; /* Slightly darker grey on hover */
+    transform: scale(1.02);
+}
+
+/* Animation for Fade In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Animation */
+@keyframes headingAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Button Fade In Animation */
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode Styling for View Table */
+.dark-mode .view-container {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff; /* White text color for dark mode */
+}
+
+.dark-mode #view-heading {
+    color: #ffffff; /* White text color for heading */
+}
+
+.dark-mode table th {
+    background-color: #333333; /* Dark background for table headers */
+    color: #ffffff; /* White text color for headers */
+}
+
+.dark-mode table td {
+    background-color: #444444; /* Dark background for table cells */
+    color: #ffffff; /* White text color for cells */
+}
+
+.dark-mode table td:hover {
+    background-color: #555555; /* Slightly lighter background on hover */
+}

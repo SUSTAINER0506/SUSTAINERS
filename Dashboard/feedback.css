@@ -1,0 +1,197 @@
+.feedback-form-container {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background: transparent;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+.feedback-form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #444;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scoped Feedback Form Group Styling */
+.feedback-form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.feedback-form-container .form-group label {
+    margin-bottom: 5px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feedback-form-container .form-group input,
+.feedback-form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+}
+
+.feedback-form-container .form-group input:focus,
+.feedback-form-container .form-group textarea:focus {
+    border-color: #3399ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(51, 153, 255, 0.3);
+    background-color: #fff;
+}
+
+/* Button Styling */
+.feedback-form-container .button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feedback-form-container .btn-submit, .feedback-form-container .btn-reset {
+    width: 40%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feedback-form-container .btn-submit {
+    background: linear-gradient(145deg, #4CAF50, #45a049);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(72, 187, 120, 0.2);
+}
+
+.feedback-form-container .btn-submit:hover {
+    background: linear-gradient(145deg, #45a049, #4CAF50);
+    box-shadow: 0 8px 20px rgba(72, 187, 120, 0.3);
+    transform: translateY(-3px);
+}
+
+.feedback-form-container .btn-reset {
+    background: linear-gradient(145deg, #f44336, #e53935);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(234, 67, 53, 0.2);
+}
+
+.feedback-form-container .btn-reset:hover {
+    background: linear-gradient(145deg, #e53935, #f44336);
+    box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Feedback Form Styling */
+.feedback-form-container .error-message {
+    color: red; /* Red color for error message */
+    font-size: 14px; /* Font size for error message */
+    margin-top: 5px; /* Margin between input and error message */
+    display: none; /* Hidden by default */
+}
+
+/* Additional styles to enhance error visibility */
+.feedback-form-container .form-group input:invalid,
+.feedback-form-container .form-group textarea:invalid {
+    border-color: red; /* Highlight input fields in red if invalid */
+}
+
+
+/* Dark Mode Styling for Feedback Form */
+.dark-mode .feedback-form-container {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff; /* White text color for dark mode */
+}
+
+.dark-mode .feedback-form-container h2 {
+    color: #ffffff; /* White text color for headings */
+}
+
+.dark-mode .feedback-form-container .form-group label {
+    color: #bbbbbb; /* Light grey color for labels */
+}
+
+.dark-mode .feedback-form-container input,
+.dark-mode .feedback-form-container textarea {
+    background-color: #f8f8f8; /* Dark background for input fields */
+    color: #000000; /* White text color in input fields */
+    border: 1px solid #555; /* Dark border for input fields */
+}
+
+
+/* Feedback Success Styling */
+.feedback-success {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.feedback-success h2 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.feedback-success p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Success Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-success {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Dark Mode Support for Success Message */
+.dark-mode .feedback-success {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff;
+}
+
+.dark-mode .feedback-success h2 {
+    color: #4CAF50;
+}
+
+.dark-mode .feedback-success p {
+    color: #bbbbbb;
+}

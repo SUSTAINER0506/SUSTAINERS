@@ -1,0 +1,207 @@
+.suggestion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #FFFFFF;  */
+    background: transparent;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow for a softer effect */
+    width: 100%;
+    max-width: 1000px;
+    animation: fadeIn 1s ease-out;
+}
+
+#suggestion-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Dark grey for heading */
+    font-size: 28px;
+    font-weight: 700;
+    animation: headingAnimation 1s ease-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #DDDDDD; /* Light grey border for table */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+th {
+    background-color: #F2F2F2; /* Light grey background for table headers */
+    color: #333333; /* Dark grey text */
+}
+
+td {
+    background-color: #FFFFFF; /* White background for table cells */
+    color: #000000; /* Black text */
+}
+
+td:hover {
+    background-color: #F7F7F7; /* Slightly darker grey on hover */
+    transform: scale(1.02);
+}
+
+/* Animation for Fade In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Animation */
+@keyframes headingAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Button Fade In Animation */
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for View Report Button */
+.btn-report {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Green background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-report:hover {
+    background-color: #aa362a; /* Darker green on hover */
+    transform: translateY(-3px); /* Slightly move the button up on hover */
+}
+
+.btn-report:active {
+    background-color: #e74c3c; /* Even darker green when clicked */
+    transform: translateY(0); /* Reset the button position on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Center the button horizontally */
+.button-center {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    margin-top: 20px; /* Adds some spacing above the button */
+}
+
+/* Dark Mode Styling for Suggestions Table */
+.dark-mode .suggestion-container {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff; /* White text color for dark mode */
+}
+
+.dark-mode #suggestion-heading {
+    color: #ffffff; /* White text color for heading */
+}
+
+.dark-mode table th {
+    background-color: #333333; /* Dark background for table headers */
+    color: #ffffff; /* White text color for headers */
+}
+
+.dark-mode table td {
+    background-color: #444444; /* Dark background for table cells */
+    color: #ffffff; /* White text color for cells */
+}
+
+.dark-mode table td:hover {
+    background-color: #555555; /* Slightly lighter background on hover */
+}
+
+.dark-mode .btn-report {
+    background-color: #e74c3c; /* Darker green for dark mode */
+    color: #ffffff;
+}
+
+.dark-mode .btn-report:hover {
+    background-color: #aa362a;
+}
+
+
+
+
+/* Add styles for the modal container */
+.report {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+.report nav {
+    width: 95%;
+    margin: auto;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    /* position: absolute; */
+    /* top: 10px; */
+    /* right: 10px; */
+}
+
+.report nav i {
+    font-size: 24px;
+    /* margin-left: 10px; */
+    cursor: pointer;
+    color: rgb(228, 228, 228);
+}
+
+.report img {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 93%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.hidden {
+    display: none;
+}
+#box{
+    text-align: justify;
+}

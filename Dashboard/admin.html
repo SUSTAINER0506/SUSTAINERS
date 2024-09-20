@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div id="leftmost">
+            <img src="logo2.png" alt="Logo" class="logo">
+            <p class="sustainers" id="animated-text">
+                Sustainers<!-- <span>S</span><span>u</span><span>s</span><span>t</span><span>a</span><span>i</span><span>n</span><span>e</span><span>r</span><span>s</span> -->
+            </p>
+        </div>
+        <div class="mid">
+            <button id="viewDataButton" class="nav-button" onclick="showSection('user-data-section')">View Data</button>
+            <button id="viewFeedbackButton" class="nav-button" onclick="showSection('user-feedback-section')">View Feedback</button>
+        </div>
+        <div class="nav-right">
+            <!-- <img class="toggleButton" src="moon.svg" alt="moon"> -->
+            <button class="logout-button" onclick="buttonAction('Logout')">Logout</button>
+        </div>
+    </nav>
+    <div class="container" id="user-data-section">
+        <h2>All Users Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Appliance Type</th>
+                    <th>Model</th>
+                    <th>Energy (W)</th>
+                    <th>Water (L)</th>
+                    <th>Duration (Hrs)</th>
+                    <th>Avg Temp (°C)</th>
+                    <!-- <th>Room Temp (°C)</th> -->
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="userDataTable">
+                <!-- Rows will be populated here via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <div id="user-feedback-section">
+        
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

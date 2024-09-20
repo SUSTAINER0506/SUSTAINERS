@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Overlay -->
+    <div id="overlay"></div>
+    <header>
+        <div class="outer">
+            <div id="leftmost">
+                <img src="logo2.png" alt="Logo" class="logo">
+                <p class="sustainers" id="animated-text">
+                    Sustainers<!-- <span>S</span><span>u</span><span>s</span><span>t</span><span>a</span><span>i</span><span>n</span><span>e</span><span>r</span><span>s</span> -->
+                </p>
+            </div>
+            <div id="middle">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right-most">
+                <!-- <img class="toggleButton" src="moon.svg" alt="moon"> -->
+                <button id="login"><a href="#home">Login</a></button>
+            </div>
+        </div>
+    </header>
+    <!-- Home Section -->
+    <section id="home">
+        <div id="home-img">
+            <img src="Sustainability.jpg" alt="">
+        </div>
+        <div id="home-theory">
+            <div class="points">
+                <h3>Sustainability:</h3>
+                <p>Focusing on eco-friendly solutions that reduce environmental impact, utilizing sustainable materials
+                    and practices to minimize the carbon footprint.</p>
+            </div>
+            <!-- <div class="points">
+                <h3>Innovation:</h3>
+                <p>Embracing cutting-edge technology and creative solutions that enhance functionality, user experience, and adaptability in modern living spaces.</p>
+            </div> -->
+            <div class="points">
+                <h3>Cost Efficiency:</h3>
+                <p>Implementing solution that optimize energy and water usage, reducing operational costs and saving
+                    money in the long run.</p>
+            </div>
+            <div class="points">
+                <h3>Water Saving:</h3>
+                <p>Utilizing advanced water management technologies, such as low-flow fixtures to conserve water without
+                    sacrificing performance.</p>
+            </div>
+            <!-- <div class="points">
+                <h3>Real-time Monitoring:</h3>
+                <p>Leveraging sensors to provide instant feedback and data analytics, enabling proactive maintenance and efficient resource management.</p>
+            </div> -->
+            <div class="points">
+                <h3>Energy Saving:</h3>
+                <p>Incorporating energy-efficient techniques to reduce overall energy consumption and utility bills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <div id="about-us-theory">
+            <div id="box-1">
+                <h1>About Us</h1>
+                <p>At Sustainers, we specialize in software that monitors and optimizes energy and water use in home
+                    appliances. Our platform empowers you to manage resources efficiently, reduce costs, and contribute
+                    to a sustainable future with actionable insights.</p>
+            </div>
+            <div id="box-2">
+                <h2>Our Mission</h2>
+                <p>Enhancing appliance efficiency and reducing water and energy waste are key to sustainable household
+                    management and promoting sustainable living.
+                </p>
+            </div>
+        </div>
+        <div id="about-us-img">
+            <img src="About us.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Get in Touch</h1>
+        <p>Have any questions or need help with something? We're here to assist you.</p>
+        <div id="images">
+            <img src="facebook.png" alt="Facebook">
+            <img src="instagram.png" alt="Instagram">
+            <img src="X.png" alt="Twitter">
+        </div>
+        <p>Phone: 0230-2420666</p>
+        <p>Email: sevaniaaryan7588@gmail.com</p>
+
+    </section>
+
+
+    <!-- Signup Form -->
+    <div id="form1" class="form">
+        <i class="fa-solid fa-xmark pointer cross1"></i>
+        <p class="signup">SignUp</p>
+        <form id="signupForm">
+            <div class="username input">
+                <i class="fa-solid fa-user"></i>
+                <input id="signup-username" class="text" type="text" placeholder="Enter your username">
+                <div class="popup-message error"></div> <!-- Add pop-up message element -->
+            </div>
+            <div class="email input">
+                <i class="fa-solid fa-envelope"></i>
+                <input id="signup-email" class="text" type="email" placeholder="Enter your email">
+                <div class="popup-message error"></div> <!-- Add pop-up message element -->
+            </div>
+            <div class="password input">
+                <i class="fa-solid fa-lock"></i>
+                <input id="signup-password" class="text" type="password" placeholder="Create password">
+                <i class="fa-regular fa-eye-slash pointer eyeicon"></i>
+
+                <div class="popup-message error"></div> <!-- Add pop-up message element -->
+            </div>
+            <div class="password input">
+                <i class="fa-solid fa-lock"></i>
+                <input id="signup-confirm-password" class="text" type="password" placeholder="Confirm password">
+                <i class="fa-regular fa-eye-slash pointer eyeicon"></i>
+
+                <div class="popup-message error"></div> <!-- Add pop-up message element -->
+            </div>
+            <p>
+                <button class="btn" id="signup-btn">Signup Now</button>
+            </p>
+        </form>
+        <!-- OR line -->
+        <div class="or-line">
+            <span>OR</span>
+        </div>
+        <!-- New Google Signup Button -->
+        <div class="google-signup">
+            <button class="google-btn">
+                <img src="google-logo.svg" alt="Google Logo" class="google-logo">
+                Continue with Google
+            </button>
+        </div>
+        <p class="last">Already have an account? <span><a class="log" href="#">Login</a></span></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="form2" class="form">
+        <i class="fa-solid fa-xmark pointer cross2"></i>
+        <p class="signup">Login</p>
+        <div class="email input">
+            <i class="fa-solid fa-envelope"></i>
+            <input id="login-email" class="text" type="email" placeholder="Enter your email" required>
+            <div class="popup-message error"></div> <!-- Add pop-up message element -->
+        </div>
+        <div class="password input">
+            <i class="fa-solid fa-lock"></i>
+            <input class="text" type="password" placeholder="Enter your password" required>
+            <i class="fa-regular fa-eye-slash pointer eyeicon"></i>
+
+            <div class="popup-message error"></div> <!-- Add pop-up message element -->
+        </div>
+        <div class="middle">
+            <div>
+                <input type="checkbox"> Remember me
+            </div>
+            <a href="#">Forget Password?</a>
+        </div>
+        <p>
+            <button class="btn" id="login-btn">Login Now</button>
+        </p>
+        <!-- OR line -->
+        <div class="or-line">
+            <span>OR</span>
+        </div>
+        <!-- New Google Signup Button -->
+        <div class="google-signup">
+            <button class="google-btn">
+                <img   src="google-logo.svg" alt="Google Logo" class="google-logo" >
+                Continue with Google
+            </button>
+        </div>
+        <p class="last">Don't have an account? <span><a class="sign" href="#">Signup</a></span></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
